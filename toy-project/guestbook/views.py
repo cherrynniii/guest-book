@@ -21,8 +21,7 @@ class PostList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def get(self, request, format=None):
-        posts = Post.objects.all()
-				# 많은 post들을 받아오려면 (many=True) 써줘야 한다! 이렇게 에러뜨는 경우가 생각보다 많다.
+        posts = Post.objects.all().order_by('-created_at')
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data)
     
