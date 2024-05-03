@@ -1,2 +1,2 @@
-# guest-book
-for toy project
+# 방명록
+멋사 12기 토이프로젝트
