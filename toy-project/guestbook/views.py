@@ -48,6 +48,7 @@ class PostDetail(APIView):
         if serializer.is_valid():
             if post.password == request.data.get('password'):
                 post.delete()
+                return JsonResponse({'message':'success'}, status=204)
             else:
                 return JsonResponse({'message':'비밀번호가 올바르지 않습니다.'}, status=400)
         return Response(status=status.HTTP_204_NO_CONTENT)
