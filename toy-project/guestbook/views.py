@@ -42,7 +42,7 @@ class PostDetail(APIView):
                 return JsonResponse({'message':'비밀번호가 올바르지 않습니다.'}, status=400)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    def delete(self,request,id):
+    def post(self,request,id):
         post = get_object_or_404(Post, id=id)
         serializer = PostDelSerializer(post, data=request.data)
         if serializer.is_valid():
