@@ -164,3 +164,5 @@ CORS_ORIGIN_WHITELIST = [
     "http://anyeeah.github.io/",
     "http://xn--2o2b9x44yvmbgyad6pqokdice6hczc.xn--h32bi4v.xn--3e0b707e/",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
