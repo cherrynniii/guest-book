@@ -158,6 +158,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:9001",
+]
+
+CORS_ORIGIN_WHITELIST = [
     "http://anyeeah.github.io/",
     "http://xn--2o2b9x44yvmbgyad6pqokdice6hczc.xn--h32bi4v.xn--3e0b707e/",
 ]
